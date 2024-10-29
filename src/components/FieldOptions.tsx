@@ -1,4 +1,3 @@
-// components/FieldOptions.tsx
 import React, { useEffect, useState } from 'react';
 import { Box, VStack, Text, Button, useToast } from '@chakra-ui/react';
 import { useForm } from '../FormContext';

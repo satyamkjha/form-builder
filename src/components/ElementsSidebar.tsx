@@ -1,4 +1,3 @@
-// components/FormBuilder.tsx
 import React from 'react';
 import { Box, VStack, Text, Button } from '@chakra-ui/react';
 import { useForm } from '../FormContext';
@@ -15,7 +14,6 @@ const ElementsSidebar: React.FC<{
 
 	const { state } = useForm();
 
-	// Function to save state to local storage
 
 	return (
 		<Box
@@ -42,7 +40,6 @@ const ElementsSidebar: React.FC<{
 				))}
 			</VStack>
 
-			{/* Action Buttons */}
 			<VStack spacing={4} mt={4}>
 				<Button w='full' onClick={() => setModalOpen(true)} colorScheme='teal'>
 					Preview Form

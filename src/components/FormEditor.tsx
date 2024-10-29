@@ -1,4 +1,3 @@
-// components/FormBuilder.tsx
 import React from 'react';
 import { Box, VStack, Text, Input } from '@chakra-ui/react';
 import { useForm } from '../FormContext';

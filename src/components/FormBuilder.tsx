@@ -1,20 +1,5 @@
-// components/FormBuilder.tsx
 import React, { useEffect } from 'react';
-import {
-	Box,
-	Flex,
-	VStack,
-	Text,
-	useToast,
-	Input,
-	Select,
-	Radio,
-	RadioGroup,
-	Stack,
-	NumberInput,
-	NumberInputField,
-	Button,
-} from '@chakra-ui/react';
+import { Flex, useToast } from '@chakra-ui/react';
 import { useForm } from '../FormContext';
 import { FormField, FORM_ELEMENTS } from '../types';
 import ElementsSidebar from './ElementsSidebar';
@@ -26,7 +11,6 @@ const FormBuilder: React.FC = () => {
 	const toast = useToast();
 
 	useEffect(() => {
-		// Set a new current form when the component mounts
 		const newForm = {
 			id: `form-${Date.now()}`,
 			title: '',

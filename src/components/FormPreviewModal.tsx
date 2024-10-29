@@ -10,7 +10,7 @@ import {
 	Text,
 	VStack,
 } from '@chakra-ui/react';
-import { Form } from '../types'; // Ensure you import the Form type if necessary
+import { Form } from '../types';
 import FieldPreview from './FieldPreview';
 
 interface FormPreviewModalProps {

@@ -1,4 +1,3 @@
-// FieldProperties.tsx
 import React, { useEffect, useState } from 'react';
 import { Box, VStack, Text, Button } from '@chakra-ui/react';
 import { useForm } from '../FormContext';
@@ -10,7 +9,6 @@ const FieldProperties: React.FC = () => {
 	const { state, dispatch } = useForm();
 	const { selectedField } = state;
 
-	// Local state for required field
 	const [isRequired, setIsRequired] = useState(
 		selectedField?.required || false
 	);
@@ -27,10 +25,9 @@ const FieldProperties: React.FC = () => {
 		);
 	}
 
-	// Toggles the "required" state of the selected field
 	const toggleRequired = () => {
 		const newRequiredState = !isRequired;
-		setIsRequired(newRequiredState); // Update local state
+		setIsRequired(newRequiredState);
 		dispatch({
 			type: 'UPDATE_FIELD',
 			payload: {
@@ -40,7 +37,6 @@ const FieldProperties: React.FC = () => {
 		});
 	};
 
-	// Handle field deletion
 	const handleDelete = () => {
 		dispatch({ type: 'DELETE_FIELD', payload: selectedField.id });
 	};
@@ -52,9 +48,8 @@ const FieldProperties: React.FC = () => {
 			bg='gray.50'
 			borderLeft='1px'
 			borderColor='gray.200'
-			maxHeight='100vh' // Restrict height to 100vh
-			overflowY='auto' // Enable vertical scrolling
-		>
+			maxHeight='100vh'
+			overflowY='auto'>
 			<VStack spacing={4} align='stretch'>
 				<FieldTextProperties />
 				<Box>
@@ -66,7 +61,6 @@ const FieldProperties: React.FC = () => {
 						{isRequired ? 'Required' : 'Optional'}
 					</Button>
 				</Box>
-				{/* Only render FieldOptions for checkbox, radio, and select */}
 				{(selectedField.type === 'checkbox' ||
 					selectedField.type === 'radio' ||
 					selectedField.type === 'select') && <FieldOptions />}

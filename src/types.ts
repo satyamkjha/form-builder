@@ -92,7 +92,7 @@ export type FormAction =
 			payload: { id: string; updates: Partial<FormField> };
 	  }
 	| { type: 'DELETE_FIELD'; payload: string }
-	| { type: 'DELETE_FORM'; payload: string } // Add DELETE_FORM action type
+	| { type: 'DELETE_FORM'; payload: string }
 	| { type: 'SELECT_FIELD'; payload: FormField | null }
 	| { type: 'SAVE_FORM' }
 	| { type: 'UPDATE_FORM_SETTINGS'; payload: Partial<Form> }

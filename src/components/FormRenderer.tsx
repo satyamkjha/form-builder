@@ -1,4 +1,3 @@
-// components/FormRenderer.tsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Box, Flex, Heading, Text, VStack } from '@chakra-ui/react';
@@ -23,8 +22,7 @@ const FormRenderer: React.FC = () => {
 				height={'100vh'}
 				margin='0 auto'
 				padding={5}
-				bg='white' // Very light gray background
-			>
+				bg='white'>
 				{!currentForm ? (
 					<Text fontSize='lg' color='red.500'>
 						Form not found.

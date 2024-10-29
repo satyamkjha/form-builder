@@ -1,4 +1,3 @@
-// components/OptionInput.tsx
 import React, { useState, useEffect } from 'react';
 import { Flex, Input, IconButton } from '@chakra-ui/react';
 import { MinusIcon } from '@chakra-ui/icons';

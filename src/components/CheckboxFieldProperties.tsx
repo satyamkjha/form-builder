@@ -1,4 +1,3 @@
-// CheckboxFieldProperties.tsx
 import React from 'react';
 import { Box, VStack, Text, Flex, Button } from '@chakra-ui/react';
 import { useForm } from '../FormContext';

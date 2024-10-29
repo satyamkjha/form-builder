@@ -7,19 +7,16 @@ const FieldTextProperties: React.FC = () => {
 	const { state, dispatch } = useForm();
 	const { selectedField } = state;
 
-	// Local state to hold input values before debounced update
 	const [label, setLabel] = useState(selectedField?.label || '');
 	const [placeholder, setPlaceholder] = useState(
 		selectedField?.placeholder || ''
 	);
 
-	// Effect to synchronize local state with selectedField on selection change
 	useEffect(() => {
 		setLabel(selectedField?.label || '');
 		setPlaceholder(selectedField?.placeholder || '');
 	}, [selectedField]);
 
-	// Debounce effect to dispatch updates after typing stops
 	useEffect(() => {
 		const debounceTimeout = setTimeout(() => {
 			if (selectedField) {
